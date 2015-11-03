@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding:0;
+    font-family: 'Segoe UI';
+    background-size: cover;
+    background-image: url(../img/background.jpg);
+}
+
+#taskbar-wrapper {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#taskbar {
+    height: 36px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#quickstart img {
+    width: 20px;
+    height: 100%;
+    padding-left: 9.6px;
+    padding-right: 9.6px;
+    padding-top: 6.3px;
+    padding-bottom: 6.3px;
+    margin: 0px;
+}
+
+#quickstart img:hover {
+    background-color: #191C1F
+}

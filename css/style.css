@@ -7,6 +7,91 @@ html, body {
     background-image: url(../img/background.jpg);
 }
 
+span {
+    font-size: 0.75em;
+    cursor: default;
+}
+
+.small-icon {
+    width: 18px;
+    height: 100%;/*
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;*/
+}
+
+#titlebar {
+    height: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#titlebar span {
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#titlebar span:hover {
+    background-color: black;
+}
+
+#menubar {
+    height: 24px;
+    border-bottom: 1px solid rgb(218, 219, 220);
+}
+
+#menubar span {
+    margin: 0;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.7em;
+}
+
+#menubar span:not(#file) {
+    border: 1px solid white;
+    border-bottom: 0px;
+}
+
+#menubar span:not(#file):hover {
+    border: 1px solid rgb(218, 219, 220);
+    border-bottom: 0px;
+}
+
+#file {
+    border-top: 1px solid #1979CA;
+    border-right: 1px solid #1979CA;
+    background-color: #1979CA;
+    color: white;
+}
+
+#file:hover {
+    background-color: rgb(41, 140, 255);
+}
+
+
+
+#file-explorer {
+    width: 720px;
+    height: 480px;
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    border: 1px solid rgb(99, 180, 251);
+    box-shadow: 0 0 15px gray;
+    background-color: white;
+}
+
 #taskbar-wrapper {
     position: absolute;
     padding: 0;
@@ -17,23 +102,51 @@ html, body {
 }
 
 #taskbar {
-    height: 36px;
+    height: 43px;
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
 }
 
+#quickstart {
+    float: left;
+}
+
 #quickstart img {
-    width: 20px;
+    width: 24px;
     height: 100%;
-    padding-left: 9.6px;
-    padding-right: 9.6px;
-    padding-top: 6.3px;
-    padding-bottom: 6.3px;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+    padding-top: 7.8px;
+    padding-bottom: 7.8px;
     margin: 0px;
 }
 
-#quickstart img:hover {
-    background-color: #191C1F
+#taskbar img:hover, #tray>span:hover {
+    background-color: #191C1F;
+}
+
+#tray {
+    height: 100%;
+    width: 240px;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+#tray span {
+    margin: 0;
+    font-size: 0.75em;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5.5px;
+    padding-bottom: 5.5px;
+    float: right;
+    color: white;
+    text-align: center;
+}
+
+#language {
+    line-height: 270%;
 }

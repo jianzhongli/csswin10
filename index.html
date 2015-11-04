@@ -4,13 +4,48 @@
     <meta charset="UTF-8" />
     <title>CSS Windows 10</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript">
+        function updateTime() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var day = currentTime.getDate();
+            var month = currentTime.getMonth() + 1;
+            var year = currentTime.getFullYear();
+            if (minutes < 10){
+                minutes = "0" + minutes;
+            }
+            var v = hours + ":" + minutes + "<br/>" + month + "/" + day + "/" + year;
+            setTimeout("updateTime()", 1000);
+            document.getElementById('system-time').innerHTML=v;
+        }
+        updateTime();
+    </script>
 </head>
 
 <body>
+    <a href="https://github.com/kexanie/csswin10"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+    <div id="file-explorer">
+        <div id="titlebar">
+<!--             <span><img src="img/file-explorer.png" class="small-icon"></span>
+            <span id="window-title">File Explorer</span>
+ -->        </div>
+        <div id="menubar">
+            <span id="file">File</span><span>Home</span><span>Share</span><span>View</span>
+        </div>
+    </div>
+
+
     <div id="taskbar-wrapper">
         <div id="taskbar">
             <div id="quickstart">
                 <img src="img/windows-blue.png"><img src="img/chrome.png"><img src="img/conemu.png"><img src="img/sublime.png"><img src="img/onenote.png"><img src="img/android-studio.png"><img src="img/feed-daemon.png"><img src="img/snipping-tool.png"><img src="img/mendeley.png">
+            </div>
+            <div id="tray">
+                <span id="system-time">14:04<br/>11/4/2015</span>
+                <span id="language">ENG</span>
             </div>
         </div>
     </div>

@@ -11,18 +11,54 @@ span {
     font-size: 0.75em;
     cursor: default;
 }
+ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 2px 20px 2px 15px;
+    width: 100%;
+}
+
+ul ul li:hover, .group:hover, td:hover {
+    background: rgb(229, 243, 255);
+}
+
+ul ul li:active, .group:active, td:active {
+    background: rgb(204, 232, 255);
+}
+
+div>ul {
+    height: 95%; 
+    width: 75%;
+    overflow:hidden;
+    overflow-y:scroll;
+}
+
+div {
+    cursor: default;
+}
+
+td {
+    width: 21%;
+}
 
 .small-icon {
     width: 18px;
-    height: 100%;/*
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;*/
+    height: 100%;
+}
+
+.folder-name {
+    width: 100%;
+    font-size: 0.75em;
+    text-align: center;
 }
 
 #titlebar {
-    height: 24px;
+    height: 30px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -32,25 +68,55 @@ span {
     margin: 0;
     padding-left: 8px;
     padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4.5px;
+    padding-bottom: 4.5px;
 }
 
-#titlebar span:hover {
-    background-color: black;
+.max-min-close {
+    float: right;
+    width: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.group {
+    text-transform: uppercase;
+    color: #707e8b;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 25px;
+    padding: 5px;
+}
+
+#close, #min {
+    font-size: 0.9em;
+}
+span#max {
+    font-size: 1.4em;
+    line-height: 0.7em;
+    padding-bottom: 10px;
+}
+
+#max:hover, #min:hover {
+    background-color: rgb(229,229,229);
+}
+
+#close:hover {
+    color:white;
+    background-color: rgb(232,17,35);
 }
 
 #menubar {
-    height: 24px;
+    height: 22px;
     border-bottom: 1px solid rgb(218, 219, 220);
 }
 
 #menubar span {
-    margin: 0;
-    padding-left: 19px;
-    padding-right: 19px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin: 0.1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
     font-size: 0.7em;
 }
 
@@ -75,7 +141,78 @@ span {
     background-color: rgb(41, 140, 255);
 }
 
+#addressbar {
+    padding: 0px 4px 0px 4px;
+}
 
+#addressbar>input {
+    padding: 1px 4px 1px 4px;
+    margin: 6px;
+    border: 1px solid rgb(218, 219, 220);
+    float:right;
+}
+
+#searchbox {
+    color: rgb(161, 161, 161);
+
+    width: 110px;
+}
+
+#addressbox {
+    color: black;
+    width: 500px;
+}
+
+#content-block {
+    height: 82%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#folder-tree {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    height: 95%;
+}
+
+#folder-tree img {
+    width: 20px;
+    float: left;
+}
+
+#folder-tree span.grpup, #folder-tree li {
+    font-size: 0.9em!important;
+}
+
+#main-content {
+    position: absolute;
+    top: 0px;
+    left: 25%;
+    width: 75%;
+    height: 95%;
+}
+
+#main-content img {
+    height: 80px;
+    width: 80px;
+}
+
+#statusbar {
+    position: absolute;
+    top:95%;
+    height: 5%;
+    width: 100%;
+    /*border: 1px solid black;*/
+}
+
+#status {
+    font-size: 0.7em;
+    padding: 3px 10px 3px 10px;
+    line-height: 0.5em;
+}
 
 #file-explorer {
     width: 720px;

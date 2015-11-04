@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>CSS Windows 10</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <script type="text/javascript">
         function updateTime() {
@@ -29,14 +30,140 @@
 
     <div id="file-explorer">
         <div id="titlebar">
-<!--             <span><img src="img/file-explorer.png" class="small-icon"></span>
-            <span id="window-title">File Explorer</span>
- -->        </div>
+            <span>File Explorer</span>
+            <span id="close" class="max-min-close">&#10006;</span>
+            <span id="max" class="max-min-close">&#9633;</span>
+            <span id="min" class="max-min-close">—</span>
+        </div>
         <div id="menubar">
             <span id="file">File</span><span>Home</span><span>Share</span><span>View</span>
         </div>
-    </div>
+        <div id="addressbar">
+            <input id="searchbox"  type="search" placeholder="Search Quick ... &nbsp;"></input>
+            <input id="addressbox" placeholder="Quick access"></input>
+        </div>
+        <div id="content-block">
+            <div id="folder-tree">
+              <ul>
+                <li>
+                  <span class='group'>
+                    Quick access
+                  </span>
+                  <ul>
+                    <li class='current_page'>
+                      <i class='afiles'></i>
+                      Brian
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Desktop
+                    </li>
+                    <li>
+                      <i class='apps'></i>
+                      Downloads
+                    </li>
+                    <li>
+                      <i class='desk'></i>
+                      Books
+                    </li>
+                    <li>
+                      <i class='docs'></i>
+                      workplace
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class='group'>
+                    Onedrive
+                  </span>
+                    <ul>
+                    <li class='current_page'>
+                      <i class='afiles'></i>
+                      Books
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Pictures
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class='group'>
+                    This PC
+                  </span>
+                    <ul>
+                    <li class='current_page'>
+                      <i class='afiles'></i>
+                      Desktop
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Documents
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Downloads
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Music
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Pictures
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Videos
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      Local Disk(C:)
+                    </li>
+                    <li>
+                      <i class='airdrop'></i>
+                      CD Drive E:
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class='group'>
+                    Network
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div id="main-content">
+                <table>
+                    <tr>
+                        <td><img src="img/desktop.png"><div class="folder-name">Desktop</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                        <td><img src="img/desktop.png"><div class="folder-name">Desktop</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/desktop.png"><div class="folder-name">Desktop</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                        <td><img src="img/desktop.png"><div class="folder-name">Desktop</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/desktop.png"><div class="folder-name">Desktop</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                        <td><img src="img/desktop.png"><div class="folder-name">Desktop</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                        <td><img src="img/download.png"><div class="folder-name">Download</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="statusbar">
+                <span id="status">7 items</span>
+            </div>
+        </div>
 
+    </div>
 
     <div id="taskbar-wrapper">
         <div id="taskbar">

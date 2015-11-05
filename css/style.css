@@ -19,16 +19,29 @@ ul {
 }
 
 li {
-    padding: 2px 20px 2px 15px;
+    margin: 0;
+    /*padding: 2px 0px 2px 15px;*/
     width: 100%;
+}
+ul ul li {
+    padding: 3px 0px 3px 35px;
 }
 
 ul ul li:hover, .group:hover, td:hover {
     background: rgb(229, 243, 255);
 }
 
-ul ul li:active, .group:active, td:active {
+#folder-tree ul ul li:hover, .group:hover {
+    cursor: pointer;
+}
+
+ul ul li:active, .group:active, .current-folder {
     background: rgb(204, 232, 255);
+}
+
+td:active, td:visited {
+    background: rgb(204, 232, 255);
+    border: 1px solid rgb(153, 209, 255);
 }
 
 div>ul {
@@ -43,7 +56,12 @@ div {
 }
 
 td {
-    width: 21%;
+    width: 20%;
+    border: 1px solid white;
+    text-align: center;
+}
+table, tr {
+    width: 100%;
 }
 
 .small-icon {
@@ -55,6 +73,11 @@ td {
     width: 100%;
     font-size: 0.75em;
     text-align: center;
+}
+
+.group {
+    font-size: 0.9em;
+    padding: 4px 0px 4px 25px;
 }
 
 #titlebar {
@@ -77,15 +100,6 @@ td {
     width: 30px;
     padding: 10px;
     text-align: center;
-}
-
-.group {
-    text-transform: uppercase;
-    color: #707e8b;
-    font-weight: bold;
-    letter-spacing: 0px;
-    line-height: 25px;
-    padding: 5px;
 }
 
 #close, #min {
@@ -174,7 +188,7 @@ span#max {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 25%;
+    width: 30%;
     height: 95%;
 }
 
@@ -184,13 +198,13 @@ span#max {
 }
 
 #folder-tree span.grpup, #folder-tree li {
-    font-size: 0.9em!important;
+    font-size: 0.9em;
 }
 
 #main-content {
     position: absolute;
     top: 0px;
-    left: 25%;
+    left: 23.5%;
     width: 75%;
     height: 95%;
 }
@@ -205,7 +219,6 @@ span#max {
     top:95%;
     height: 5%;
     width: 100%;
-    /*border: 1px solid black;*/
 }
 
 #status {
@@ -262,6 +275,10 @@ span#max {
 
 #taskbar img:hover, #tray>span:hover {
     background-color: #191C1F;
+}
+
+#taskbar img:active, #tray>span:active {
+    background-color: rgb(12, 16, 20);
 }
 
 #tray {

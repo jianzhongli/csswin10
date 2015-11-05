@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <title>CSS Windows 10</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <script type="text/javascript">
         function updateTime() {
@@ -23,12 +25,17 @@
         }
         updateTime();
     </script>
+    <script>
+      $(function() {
+          $( "#file-explorer" ).draggable();
+        });
+    </script>
 </head>
 
 <body>
     <a href="https://github.com/kexanie/csswin10"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
-    <div id="file-explorer">
+    <div id="file-explorer" class="ui-widget-content">
         <div id="titlebar">
             <span>File Explorer</span>
             <span id="close" class="max-min-close">&#10006;</span>
@@ -46,11 +53,11 @@
             <div id="folder-tree">
               <ul>
                 <li>
-                  <span class='group'>
+                  <div class="group current-folder">
                     Quick access
-                  </span>
+                  </div>
                   <ul>
-                    <li class='current_page'>
+                    <li>
                       <i class='afiles'></i>
                       Brian
                     </li>
@@ -73,9 +80,9 @@
                   </ul>
                 </li>
                 <li>
-                  <span class='group'>
+                  <div class='group'>
                     Onedrive
-                  </span>
+                  </div>
                     <ul>
                     <li class='current_page'>
                       <i class='afiles'></i>
@@ -88,9 +95,9 @@
                   </ul>
                 </li>
                 <li>
-                  <span class='group'>
+                  <div class='group'>
                     This PC
-                  </span>
+                  </div>
                     <ul>
                     <li class='current_page'>
                       <i class='afiles'></i>
@@ -127,9 +134,9 @@
                   </ul>
                 </li>
                 <li>
-                  <span class='group'>
+                  <div class='group'>
                     Network
-                  </span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -159,7 +166,7 @@
                 </table>
             </div>
             <div id="statusbar">
-                <span id="status">7 items</span>
+                <div id="status">15 items</div>
             </div>
         </div>
 
@@ -169,8 +176,7 @@
         <div id="taskbar">
             <div id="quickstart">
                 <img src="img/windows-blue.png"><img src="img/chrome.png"><img src="img/conemu.png"><img src="img/sublime.png"><img src="img/onenote.png"><img src="img/android-studio.png"><img src="img/feed-daemon.png"><img src="img/snipping-tool.png"><img src="img/mendeley.png">
-            </div>
-            <div id="tray">
+            </div><div id="tray">
                 <span id="system-time">14:04<br/>11/4/2015</span>
                 <span id="language">ENG</span>
             </div>

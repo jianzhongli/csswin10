@@ -232,10 +232,8 @@ span#max {
     height: 480px;
     position: fixed;
     margin: auto;
-    top: 50%;
-    bottom: 50%;
-    left: 0;
-    right: 0;
+    top: 10%;
+    left: 25%;
     padding: 0;
     border: 1px solid rgb(99, 180, 251);
     box-shadow: 0 0 15px gray;
